@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args)
     {
     Scanner sc=new Scanner(System.in);
-    int id;
+    int id,choice;
     String name,address,phone,email,status;
     CustomerService cs=new CustomerService();
     CourierService cous=new CourierService();
@@ -15,7 +15,7 @@ public class Main {
     String type=sc.nextLine();
     if(type.equalsIgnoreCase("C")){
         System.out.println("1. To Add customer Details\n2. To Update Customer Details\n3. to Book Courier\n 4. to make payment\n5. Exit\nEnter your choice: ");
-        int choice=sc.nextInt();
+        choice=sc.nextInt();
         switch(choice){
             case 1:
             System.out.println("Enter your customer id: ");
@@ -79,10 +79,25 @@ public class Main {
             status=sc.nextLine();
             pay.MakePayment(payment_id,id,amt,mode,status);
             break;
-            
+
             case 5:
             System.out.println("SEE you again ,Exiting....");
             break; 
+        }
+    }
+    else if(type.equalsIgnoreCase("A")){
+        System.out.println("1.Update courier status\n2.update payment status\n3.Exit\nEnter your choice: ");
+        choice =sc.nextInt();
+        switch(choice)
+        {
+            case 1:
+            System.out.println("Enter your courier id to be updated: ");
+            id=sc.nextInt();
+            sc.nextLine();
+            System.out.println("ENter a status to update: ");
+            status=sc.nextLine();
+            cous.updateStatus(id,status);
+            break;
         }
     }
 
