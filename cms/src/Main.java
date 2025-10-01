@@ -55,6 +55,7 @@ public class Main {
             String desc=sc.nextLine();
             System.out.println("Enter weight of your Product: ");
             double weight=sc.nextDouble();
+            sc.nextLine();
             System.out.println("Enter the status of your product: ");
             status=sc.nextLine();
             System.out.println("Enter your Customer ID: ");
@@ -63,7 +64,6 @@ public class Main {
             System.out.println("Enter the your Branch name: ");
             String bname=sc.nextLine();
             cous.BookCourier(id,desc,weight,status,customer_id,bname);
-            System.out.println("Congratualations!! your courier is successfully booked!!");
             break;
 
             case 4:
@@ -73,6 +73,7 @@ public class Main {
             id=sc.nextInt();
             System.out.println("Enter a amount to be Paid: ");
             double amt=sc.nextDouble();
+            sc.nextLine();
             System.out.println("Enter your mode you want to pay: ");
             String mode=sc.nextLine();
             System.out.println("Enter a status of your payment: ");
