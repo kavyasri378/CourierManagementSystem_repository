@@ -7,6 +7,7 @@ public class Main {
     int id;
     String name,address,phone,email;
     CustomerService cs=new CustomerService();
+    CourierService cous=new CourierService();
 
     // asking the user for checking where they are customer/ admin
     System.out.println("Enter your domain customer or admin as (C/A): ");
@@ -40,11 +41,30 @@ public class Main {
             phone=sc.nextLine();
             System.out.println("Enter your Address: ");
             address=sc.nextLine();
-            System.out.println("Enter you Email id: ");
+            System.out.println("Enter your Email id: ");
             email=sc.nextLine();
             cs.changeCustomerDetails(id,name,phone,address,email);
             break;
-            case 3:break;
+            
+            case 3:
+            System.out.println("Enter your Courier ID: ");
+            id=sc.nextInt();
+            sc.nextLine();
+            System.out.println("Enter Description for your parcel: ");
+            String desc=sc.nextLine();
+            System.out.println("Enter weight of your Product: ");
+            double weight=sc.nextDouble();
+            System.out.println("Enter the status of your product: ");
+            String status=sc.nextLine();
+            System.out.println("Enter your Customer ID: ");
+            int customer_id=sc.nextInt();
+            sc.nextLine();
+            System.out.println("Enter the your Branch name: ");
+            String bname=sc.nextLine();
+            cous.BookCourier(id,desc,weight,status,customer_id,bname);
+            System.out.println("Congratualations!! your courier is successfully booked!!");
+            break;
+
             case 4:break;
             case 5:
             System.out.println("SEE you again ,Exiting....");
