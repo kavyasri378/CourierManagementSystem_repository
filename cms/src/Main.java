@@ -98,8 +98,27 @@ public class Main {
             status=sc.nextLine();
             cous.updateStatus(id,status);
             break;
+
+            case 2:
+            System.out.println("Enter your payment id to be updated: ");
+            id=sc.nextInt();
+            sc.nextLine();
+            System.out.println("Eter a status to update: ");
+            status=sc.nextLine();
+            pay.updatepaymentStatus(id,status);
+            break;
+
+            case 3:
+            System.out.println("Thank you for spending your presious time!! exiting...");
+            break;
         }
     }
+    else
+    {
+        System.out.println("type is invalid try again..");
+    }
+
+    sc.close();
 
   }
 
