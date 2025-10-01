@@ -5,9 +5,10 @@ public class Main {
     {
     Scanner sc=new Scanner(System.in);
     int id;
-    String name,address,phone,email;
+    String name,address,phone,email,status;
     CustomerService cs=new CustomerService();
     CourierService cous=new CourierService();
+    Payment pay=new Payment();
 
     // asking the user for checking where they are customer/ admin
     System.out.println("Enter your domain customer or admin as (C/A): ");
@@ -45,7 +46,7 @@ public class Main {
             email=sc.nextLine();
             cs.changeCustomerDetails(id,name,phone,address,email);
             break;
-            
+
             case 3:
             System.out.println("Enter your Courier ID: ");
             id=sc.nextInt();
@@ -55,7 +56,7 @@ public class Main {
             System.out.println("Enter weight of your Product: ");
             double weight=sc.nextDouble();
             System.out.println("Enter the status of your product: ");
-            String status=sc.nextLine();
+            status=sc.nextLine();
             System.out.println("Enter your Customer ID: ");
             int customer_id=sc.nextInt();
             sc.nextLine();
@@ -65,7 +66,20 @@ public class Main {
             System.out.println("Congratualations!! your courier is successfully booked!!");
             break;
 
-            case 4:break;
+            case 4:
+            System.out.println("Enter your payment id: ");
+            int payment_id=sc.nextInt();
+            System.out.println("Enter a Courier_id: ");
+            id=sc.nextInt();
+            System.out.println("Enter a amount to be Paid: ");
+            double amt=sc.nextDouble();
+            System.out.println("Enter your mode you want to pay: ");
+            String mode=sc.nextLine();
+            System.out.println("Enter a status of your payment: ");
+            status=sc.nextLine();
+            pay.MakePayment(payment_id,id,amt,mode,status);
+            break;
+            
             case 5:
             System.out.println("SEE you again ,Exiting....");
             break; 
