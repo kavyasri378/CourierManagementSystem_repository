@@ -4,8 +4,9 @@ public class Main {
     public static void main(String[] args)
     {
     Scanner sc=new Scanner(System.in);
-    int id,choice;
+    int id,choice;// declaring variable before because of usinf switch 
     String name,address,phone,email,status;
+    //create obj for classes
     CustomerService cs=new CustomerService();
     CourierService cous=new CourierService();
     Payment pay=new Payment();
