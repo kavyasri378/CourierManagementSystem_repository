@@ -14,7 +14,9 @@ public class Main {
     // asking the user for checking where they are customer/ admin
     System.out.println("Enter your domain customer or admin as (C/A): ");
     String type=sc.nextLine();
+    // there is chance the user may enter a noncase sensitive letter to avoid this using equalsIgnoreCase()
     if(type.equalsIgnoreCase("C")){
+        //menu driven detail for user to choose correct work
         System.out.println("1. To Add customer Details\n2. To Update Customer Details\n3. to Book Courier\n4. to make payment\n5. Exit\nEnter your choice: ");
         choice=sc.nextInt();
         switch(choice){
@@ -56,7 +58,7 @@ public class Main {
             String desc=sc.nextLine();
             System.out.println("Enter weight of your Product: ");
             double weight=sc.nextDouble();
-            sc.nextLine();
+            sc.nextLine();//to consume extra newline
             System.out.println("Enter the status of your product: ");
             status=sc.nextLine();
             System.out.println("Enter your Customer ID: ");
