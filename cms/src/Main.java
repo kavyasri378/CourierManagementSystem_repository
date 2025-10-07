@@ -89,6 +89,8 @@ public class Main {
             break; 
         }
     }
+
+    // if the user enter 'A' admin part will work
     else if(type.equalsIgnoreCase("A")){
         System.out.println("1.Update courier status\n2.update payment status\n3.Exit\nEnter your choice: ");
         choice =sc.nextInt();
@@ -97,7 +99,7 @@ public class Main {
             case 1:
             System.out.println("Enter your courier id to be updated: ");
             id=sc.nextInt();
-            sc.nextLine();
+            sc.nextLine();// to consume extra new line
             System.out.println("ENter a status to update: ");
             status=sc.nextLine();
             cous.updateStatus(id,status);
@@ -106,17 +108,18 @@ public class Main {
             case 2:
             System.out.println("Enter your payment id to be updated: ");
             id=sc.nextInt();
-            sc.nextLine();
+            sc.nextLine();// to consume extra new line
             System.out.println("Eter a status to update: ");
             status=sc.nextLine();
             pay.updatepaymentStatus(id,status);
             break;
-
+        // this case will get execute when user enter '3'
             case 3:
             System.out.println("Thank you for spending your presious time!! exiting...");
             break;
         }
     }
+    // this case will get execute if user does not enter neither 'c' not 'a'
     else
     {
         System.out.println("type is invalid try again..");
