@@ -14,7 +14,7 @@ public class Main {
     System.out.println("Enter your domain customer or admin as (C/A): ");
     String type=sc.nextLine();
     if(type.equalsIgnoreCase("C")){
-        System.out.println("1. To Add customer Details\n2. To Update Customer Details\n3. to Book Courier\n 4. to make payment\n5. Exit\nEnter your choice: ");
+        System.out.println("1. To Add customer Details\n2. To Update Customer Details\n3. to Book Courier\n4. to make payment\n5. Exit\nEnter your choice: ");
         choice=sc.nextInt();
         switch(choice){
             case 1:
